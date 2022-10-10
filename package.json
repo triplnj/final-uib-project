@@ -1,0 +1,32 @@
+{
+  "name": "final-uib-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    
+    "nodemon-watch": "nodemon index.js -e *",
+    "dev": "npm-run-all --parallel sass-watch nodemon-watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "sass  --watch styles/main.scss public/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/triplnj/final-uib-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/triplnj/final-uib-project/issues"
+  },
+  "homepage": "https://github.com/triplnj/final-uib-project#readme",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "sass": "^1.55.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

@@ -161,12 +161,15 @@ main {
       flex-direction: column;
     }
     &-intro-heading {
+      padding:1rem;
+      line-height: 2rem;
     }
 
     &-specialization {
       display: flex;
       place-items: center;
       flex-direction: column;
+      padding:1rem;
 
       &-grid {
         display: flex;
@@ -243,7 +246,7 @@ main {
 
       .proj-img {
         width: 24rem;
-        height: 16rem;
+        height: 17.6rem;
         padding: 5%;
         img {
           width: 100%;
@@ -279,11 +282,16 @@ main {
     }
     
   }
-  main .home .home-specialization-grid .card {
-    width: 60vw;
+ .card {
+    width: 769px !important;
+    max-width: 810px;
     border: solid 1px;
     background-color: white;
     padding: 0.5rem;
+  }
+  .home-intro-heading{
+    line-height: 3rem !important;
+    padding: 3rem !important;
   }
 }
   @media (min-width: 1024px) {

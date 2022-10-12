@@ -143,10 +143,15 @@ main .home-intro {
   place-items: center;
   flex-direction: column;
 }
+main .home-intro-heading {
+  padding: 1rem;
+  line-height: 2rem;
+}
 main .home-specialization {
   display: flex;
   place-items: center;
   flex-direction: column;
+  padding: 1rem;
 }
 main .home-specialization-grid {
   display: flex;
@@ -212,7 +217,7 @@ main .home-specialization-grid .card {
   }
   .projects-grid .proj-img {
     width: 24rem;
-    height: 16rem;
+    height: 17.6rem;
     padding: 5%;
   }
   .projects-grid .proj-img img {
@@ -245,11 +250,16 @@ main .home-specialization-grid .card {
     grid-row: 2/3;
     animation: from-right 1 1s linear;
   }
-  main .home .home-specialization-grid .card {
-    width: 60vw;
+  .card {
+    width: 769px !important;
+    max-width: 810px;
     border: solid 1px;
     background-color: white;
     padding: 0.5rem;
+  }
+  .home-intro-heading {
+    line-height: 3rem !important;
+    padding: 3rem !important;
   }
 }
 @media (min-width: 1024px) {

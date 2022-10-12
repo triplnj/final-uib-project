@@ -7,7 +7,7 @@
 body {
   font-family: Roboto, sans-serif;
   font-size: 1rem;
-  background-color: rgba(158, 229, 242, 0.1);
+  background-color: hsla(189deg, 76%, 78%, 0.1);
 }
 
 .navbar {
@@ -63,8 +63,8 @@ body {
   display: none;
 }
 .navbar label input:checked + .menu {
-  box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff;
-  border-radius: 0;
+  box-shadow: 0 0 0 5vw transparent, 0 0 0 5vh transparent;
+  border-radius: 50%;
 }
 .navbar label input:checked + .menu .hamburger {
   transform: rotate(45deg);
@@ -84,11 +84,9 @@ body {
   opacity: 1;
 }
 .navbar label ul {
-  display: flex;
-  flex-direction: column;
   z-index: 200;
   position: absolute;
-  top: 50%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -97,11 +95,12 @@ body {
   transition: 0.25s 0s ease-in-out;
 }
 .navbar label a {
-  margin-bottom: 1em;
-  display: block;
-  color: #333;
+  display: inline-flex;
+  place-items: center;
+  color: hsl(0deg, 0%, 20%);
   text-decoration: none;
   list-style: none;
+  font-size: 0.8rem;
 }
 
 .navbar-response {
@@ -177,15 +176,50 @@ main .home-specialization-grid .card {
   padding: 0.5rem;
 }
 
-.contact {
-  padding: 3rem;
-}
 .contact-heading h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
+  text-align: center;
+}
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 }
 .contact-grid h3 {
   font-size: 0.9rem;
+  text-align: center;
+}
+
+.email-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.email-sub form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.email-sub form .email-form {
+  display: flex;
+  flex-direction: column;
+}
+.email-sub form .email-form input {
+  width: 180px;
+  height: 30px;
+  margin-top: 0.6rem;
+}
+.email-sub form button {
+  width: 180px;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: hsl(310deg, 100%, 49%);
+  color: white;
+  border: solid hsl(310deg, 100%, 49%);
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 @media (min-width: 400px) and (max-width: 767px) {
@@ -198,13 +232,19 @@ main .home-specialization-grid .card {
     height: 18rem;
     padding: 2rem;
   }
+  label a {
+    font-size: 1.1rem !important;
+  }
 }
 @media (min-width: 768px) {
   body {
     font-size: 1.5rem;
   }
-  label {
+  label .menu .hamburger {
     display: none;
+  }
+  form button {
+    font-size: 1.2rem;
   }
   .navbar-response {
     width: 100%;

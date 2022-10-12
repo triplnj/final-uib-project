@@ -6,8 +6,8 @@
 
 body {
   font-family: Roboto, sans-serif;
-  font-size: .8rem;
-  
+  font-size: 0.8rem;
+
   background-color: rgba(158, 229, 242, 0.1);
 }
 
@@ -143,24 +143,60 @@ body {
     }
     :hover {
       transform: scale(1.1);
-      margin-bottom: .6rem;
+      margin-bottom: 0.6rem;
     }
   }
 }
-@media (min-width: 400px) and (max-width:767px){
-    .projects .proj-img {
-        min-width: 20rem;
-        height: 13rem;
-        padding: 5%;
- 
+main {
+  // display:flex;
+  // place-items: center;
+  .home {
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    display: inherit;
+    &-intro {
+      display: flex;
+      place-items: center;
+      flex-direction: column;
     }
+    &-intro-heading {
+    }
+
+    &-specialization {
+      display: flex;
+      place-items: center;
+      flex-direction: column;
+
+      &-grid {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        gap: 1rem;
+        .card {
+          width: 300px;
+          border: solid 1px;
+          background-color: white;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
 }
 
+@media (min-width: 400px) and (max-width: 767px) {
+  .projects .proj-img {
+    width: 26rem;
+    height: 18rem;
+    padding: 2rem;
+  }
+}
 
 @media (min-width: 768px) {
-   *{
-    font-size: 1rem;
-   }
+ 
+  body {
+    font-size: 1.5rem;
+  }
   label {
     display: none;
   }
@@ -199,7 +235,6 @@ body {
     }
   }
   .projects {
-    width: 100vw;
     &-grid {
       display: grid;
       grid-template-columns: repeat(1fr, 1fr);
@@ -242,35 +277,53 @@ body {
         animation: from-right 1 1s linear;
       }
     }
+    
   }
-  @media (min-width: 1024px){
+  main .home .home-specialization-grid .card {
+    width: 60vw;
+    border: solid 1px;
+    background-color: white;
+    padding: 0.5rem;
+  }
+}
+  @media (min-width: 1024px) {
     .projects .proj-img {
-        width: 26rem;
-        height: 18rem;
-        padding: 2rem;
- 
+      padding: 2rem;
+      width: 28rem;
+      height: 18rem;
+      .one,
+      .two,
+      .three,
+      .four {
+        display: flex;
+      }
+      main .home .home-specialization-grid .card {
+        width: 60vw;
+        border: solid 1px;
+        background-color: white;
+        padding: 0.5rem;
+      }
     }
   }
 
-  @keyframes from-right {
-    0% {
-      opacity: 0;
-      position: relative;
-      right: -100%;
-    }
-    100% {
-      right: 100%;
-    }
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    position: relative;
+    right: -100%;
   }
-  @keyframes from-left {
-    0% {
-      opacity: 0;
-      position: relative;
-      left: -100%;
-    }
-    100% {
-      left: 100%;
-    }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes from-left {
+  0% {
+    opacity: 0;
+    position: relative;
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }
 
@@ -282,11 +335,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  .soc-med{
-    color:white;
+  .soc-med {
+    color: white;
     position: absolute;
-    right:2rem;
-    i{ padding:0.3rem;}
-   
-}
+    right: 2rem;
+    i {
+      cursor: pointer;
+      color: white;
+      padding: 0.3rem;
+    }
+  }
 }

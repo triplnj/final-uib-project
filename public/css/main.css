@@ -132,16 +132,45 @@ body {
   margin-bottom: 0.6rem;
 }
 
+main .home {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  display: inherit;
+}
+main .home-intro {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+}
+main .home-specialization {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+}
+main .home-specialization-grid {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 1rem;
+}
+main .home-specialization-grid .card {
+  width: 300px;
+  border: solid 1px;
+  background-color: white;
+  padding: 0.5rem;
+}
+
 @media (min-width: 400px) and (max-width: 767px) {
   .projects .proj-img {
-    min-width: 20rem;
-    height: 13rem;
-    padding: 5%;
+    width: 26rem;
+    height: 18rem;
+    padding: 2rem;
   }
 }
 @media (min-width: 768px) {
-  * {
-    font-size: 1rem;
+  body {
+    font-size: 1.5rem;
   }
   label {
     display: none;
@@ -174,9 +203,6 @@ body {
   .navbar-response ul li a:hover::after {
     transform: scaleX(1);
     transform-origin: 50% 50%;
-  }
-  .projects {
-    width: 100vw;
   }
   .projects-grid {
     display: grid;
@@ -219,36 +245,50 @@ body {
     grid-row: 2/3;
     animation: from-right 1 1s linear;
   }
+  main .home .home-specialization-grid .card {
+    width: 60vw;
+    border: solid 1px;
+    background-color: white;
+    padding: 0.5rem;
+  }
 }
-@media (min-width: 768px) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .projects .proj-img {
-    width: 26rem;
-    height: 18rem;
     padding: 2rem;
+    width: 28rem;
+    height: 18rem;
+  }
+  .projects .proj-img .one,
+.projects .proj-img .two,
+.projects .proj-img .three,
+.projects .proj-img .four {
+    display: flex;
+  }
+  .projects .proj-img main .home .home-specialization-grid .card {
+    width: 60vw;
+    border: solid 1px;
+    background-color: white;
+    padding: 0.5rem;
   }
 }
-@media (min-width: 768px) {
-  @keyframes from-right {
-    0% {
-      opacity: 0;
-      position: relative;
-      right: -100%;
-    }
-    100% {
-      right: 100%;
-    }
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    position: relative;
+    right: -100%;
+  }
+  100% {
+    right: 100%;
   }
 }
-@media (min-width: 768px) {
-  @keyframes from-left {
-    0% {
-      opacity: 0;
-      position: relative;
-      left: -100%;
-    }
-    100% {
-      left: 100%;
-    }
+@keyframes from-left {
+  0% {
+    opacity: 0;
+    position: relative;
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }
 footer {
@@ -266,6 +306,8 @@ footer .soc-med {
   right: 2rem;
 }
 footer .soc-med i {
+  cursor: pointer;
+  color: white;
   padding: 0.3rem;
 }
 

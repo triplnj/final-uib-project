@@ -16,6 +16,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   &-links ul {
+    margin-top: 10px;
     font-size: 2rem;
   }
 
@@ -96,7 +97,7 @@ body {
   label ul {
     z-index: 200;
     position: absolute;
-    top: 5%;
+    top: 4%;
     left: 50%;
     transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -286,8 +287,10 @@ main {
         text-decoration: none;
         color: #333;
         cursor: pointer;
+        
 
         &::after {
+          z-index: 300;
           display: block;
           content: "";
           border-bottom: 3px solid hsl(310, 100%, 49%);

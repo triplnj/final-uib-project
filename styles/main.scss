@@ -70,7 +70,7 @@ body {
 
   label input:checked + .menu {
     box-shadow: 0 0 0 5vw transparent, 0 0 0 5vh transparent;
-    border-radius: 50%;
+    border-radius: 100%;
   }
 
   label input:checked + .menu .hamburger {
@@ -179,9 +179,11 @@ main {
       &-grid {
         display: flex;
         flex-direction: column;
-        place-items: center;
+        align-items: center;
+        justify-content: center;
         gap: 1rem;
         .card {
+       
           max-width: 300px;         
           border: solid 1px;
           background-color: white;
@@ -255,10 +257,7 @@ main {
   label a {
     font-size: 1.1rem !important;
   }
-  .card{
-    height:204px;
-    background-color: blue;
-  }
+  
 }
 
 @media (min-width: 768px) {
@@ -320,6 +319,7 @@ main {
       display: grid;
       grid-template-columns: repeat(1fr, 1fr);
       grid-template-rows: repeat(2, 1fr);
+    
       place-content: center;
 
       .proj-img {
@@ -370,17 +370,18 @@ main {
   }
   main .home-specialization-grid {
     display: flex;
-
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
   }
   .card {
-    // width: 50% !important;
-    max-width: 400px;
+
+    width: 22rem;
     border: solid 1px;
     background-color: white;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 }
 

@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 body {
@@ -65,7 +65,7 @@ body {
 }
 .navbar label input:checked + .menu {
   box-shadow: 0 0 0 5vw transparent, 0 0 0 5vh transparent;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 .navbar label input:checked + .menu .hamburger {
   transform: rotate(45deg);
@@ -167,7 +167,8 @@ main .home-specialization {
 main .home-specialization-grid {
   display: flex;
   flex-direction: column;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 main .home-specialization-grid .card {
@@ -235,10 +236,6 @@ main .home-specialization-grid .card {
   }
   label a {
     font-size: 1.1rem !important;
-  }
-  .card {
-    height: 204px;
-    background-color: blue;
   }
 }
 @media (min-width: 768px) {
@@ -339,15 +336,17 @@ main .home-specialization-grid .card {
   }
   main .home-specialization-grid {
     display: flex;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
   }
   .card {
-    max-width: 400px;
+    width: 22rem;
     border: solid 1px;
     background-color: white;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 }
 @media (min-width: 1024px) {

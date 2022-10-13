@@ -18,6 +18,7 @@ body {
   justify-content: flex-end;
 }
 .navbar-links ul {
+  margin-top: 10px;
   font-size: 2rem;
 }
 .navbar label .menu {
@@ -86,7 +87,7 @@ body {
 .navbar label ul {
   z-index: 200;
   position: absolute;
-  top: 5%;
+  top: 4%;
   left: 50%;
   transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -170,7 +171,7 @@ main .home-specialization-grid {
   gap: 1rem;
 }
 main .home-specialization-grid .card {
-  width: 300px;
+  max-width: 300px;
   border: solid 1px;
   background-color: white;
   padding: 0.5rem;
@@ -235,12 +236,19 @@ main .home-specialization-grid .card {
   label a {
     font-size: 1.1rem !important;
   }
+  .card {
+    height: 204px;
+    background-color: blue;
+  }
 }
 @media (min-width: 768px) {
   body {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   label .menu .hamburger {
+    display: none;
+  }
+  label ul {
     display: none;
   }
   form button {
@@ -266,6 +274,7 @@ main .home-specialization-grid .card {
     cursor: pointer;
   }
   .navbar-response ul li a::after {
+    z-index: 300;
     display: block;
     content: "";
     border-bottom: 3px solid hsl(310deg, 100%, 49%);

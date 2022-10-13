@@ -182,7 +182,8 @@ main {
         place-items: center;
         gap: 1rem;
         .card {
-          width: 300px;
+          max-width: 300px;
+         
           border: solid 1px;
           background-color: white;
           padding: 0.5rem;
@@ -255,13 +256,21 @@ main {
   label a {
     font-size: 1.1rem !important;
   }
+  .card{
+    height:204px;
+    background-color: blue;
+  }
 }
 
 @media (min-width: 768px) {
   body {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
-  label .menu .hamburger {
+  label .menu .hamburger{
+    display: none;
+    
+  }
+  label ul{
     display: none;
   }
   form button {

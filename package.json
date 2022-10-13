@@ -7,7 +7,7 @@
     "nodemon-watch": "nodemon index.js -e *",
     "start": "fuser -k -n tcp 8000 & npm-run-all --parallel sass-watch nodemon-watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-watch": "sass  --watch styles/main.scss public/css/main.css"
+    "sass-watch": "sass  --watch styles/main.scss docs/css/main.css"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/triplnj/final-uib-project#readme",
   "keywords": [],
-  "description": "",
+  "description": "Purpose of this project for me was to  introduce myself to future employers but regarding the design in 'less is more' manner showing only basic information.   ## Development environment preparation  This project is created in VS Code IDE. I wanted to create index.js and by Express nodejs framework and nodemon server run the application instead by the LiveServer VS extension. The application can be started with the commands 'npm start' or 'npm run start' from the terminal.  ## Versions Current version is 1.0 and have some issues which could be solved easily.",
   "dependencies": {
     "express": "^4.18.2",
     "nodemon": "^2.0.20",

@@ -125,7 +125,9 @@ body {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   &-heading {
     margin-bottom: 1rem;
   }
@@ -184,10 +186,11 @@ main {
         gap: 1rem;
         .card {
        
-          max-width: 300px;         
+          width: 70%;         
           border: solid 1px;
           background-color: white;
           padding: 0.5rem;
+          
         }
       }
     }
@@ -248,10 +251,12 @@ main {
   .projects {
     padding: 3rem;
     margin-top: 2rem;
+
     .proj-img {
       width: 26rem;
       height: 18rem;
       padding: 2rem;
+     
     }
   }
   label a {
@@ -315,18 +320,21 @@ main {
   .projects {
     padding: 3rem;
     margin-top: 2rem;
+    gap: 1rem;
     &-grid {
       display: grid;
       grid-template-columns: repeat(1fr, 1fr);
       grid-template-rows: repeat(2, 1fr);
-    
+     
       place-content: center;
 
       .proj-img {
         width: 24rem;
         height: 17.6rem;
         padding: 5%;
+        
         img {
+       
           width: 100%;
           height: 100%;
           border: 1px solid #333;
@@ -375,14 +383,17 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  }
-  .card {
-
-    width: 22rem;
+    
+    .card {
+    min-height: 142px;
+    width: 40%;
     border: solid 1px;
     background-color: white;
     padding: 1rem;
+
   }
+  }
+  
 }
 
 @media (min-width: 1024px) {
@@ -403,6 +414,7 @@ main {
   }
   main .home .home-specialization-grid .card {
     width: 1023px !important;
+    min-height: 100px;
     max-width: 1023px !important;
     border: solid 1px;
     background-color: white;

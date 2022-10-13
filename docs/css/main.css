@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -113,7 +113,9 @@ body {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 .projects-heading {
   margin-bottom: 1rem;
@@ -172,7 +174,7 @@ main .home-specialization-grid {
   gap: 1rem;
 }
 main .home-specialization-grid .card {
-  max-width: 300px;
+  width: 70%;
   border: solid 1px;
   background-color: white;
   padding: 0.5rem;
@@ -285,6 +287,7 @@ main .home-specialization-grid .card {
   .projects {
     padding: 3rem;
     margin-top: 2rem;
+    gap: 1rem;
   }
   .projects-grid {
     display: grid;
@@ -342,8 +345,9 @@ main .home-specialization-grid .card {
     justify-content: center;
     align-items: center;
   }
-  .card {
-    width: 22rem;
+  main .home-specialization-grid .card {
+    min-height: 142px;
+    width: 40%;
     border: solid 1px;
     background-color: white;
     padding: 1rem;
@@ -367,6 +371,7 @@ main .home-specialization-grid .card {
   }
   main .home .home-specialization-grid .card {
     width: 1023px !important;
+    min-height: 100px;
     max-width: 1023px !important;
     border: solid 1px;
     background-color: white;

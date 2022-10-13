@@ -6,7 +6,6 @@
     
     "nodemon-watch": "nodemon index.js -e *",
     "start": "fuser -k -n tcp 8000 & npm-run-all --parallel sass-watch nodemon-watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "sass-watch": "sass  --watch styles/main.scss docs/css/main.css"
   },
   "repository": {
